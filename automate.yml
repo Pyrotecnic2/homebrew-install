@@ -1,2 +1,13 @@
 # ansible-playbook -i automate.yml
 
+---
+- name: automate homebrew install playbook
+  hosts: all
+  tasks: 
+    - name: install Homebrew
+      shell: 
+        sh: "shell bash.sh"
+      
+    - name: install Terraform
+      shell:
+        sh: "shell terraform_dl.sh"
